@@ -1,0 +1,13 @@
+.icon {
+  position: absolute;
+  bottom: 100px;
+  left: 350px;
+}
+.city {
+  text-align: center;
+  position: relative;
+  right: 20px;
+  bottom: 150px;
+  padding: 0;
+  font-size: 30px;
+}

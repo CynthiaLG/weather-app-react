@@ -1,0 +1,8 @@
+ul {
+  text-transform: capitalize;
+  position: relative;
+  left: -40px;
+  font-size: 10px;
+  list-style-type: none;
+  text-align: left;
+}
