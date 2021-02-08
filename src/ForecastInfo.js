@@ -1,5 +1,5 @@
 import React from "react";
-import ForecasteImg from "./ForecasteImg";
+import ForecasteImg from "./ForecastImg";
 
 export default function ForecastInfo() {
   return (
