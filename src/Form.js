@@ -10,6 +10,7 @@ export default function Form() {
           placeholder="Enter your city"
           id="city-input"
           autocomplete="off"
+          autoFocus="on"
         />
         <input type="Submit" id="submit-form" value="Search" />
         <button type="button" className="btn-info" id="current-location">
