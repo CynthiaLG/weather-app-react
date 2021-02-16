@@ -7,13 +7,13 @@ export default function Form() {
       <form id="search-form">
         <input
           type="search"
-          placeholder="Enter your city"
-          id="city-input"
+          placeholder="Type your city..."
+          className="city-input"
           autocomplete="off"
           autoFocus="on"
         />
-        <input type="Submit" id="submit-form" value="Search" />
-        <button type="button" className="btn-info" id="current-location">
+        <input type="Submit" className="submit" value="Search" />
+        <button type="button" className="btn-info-location">
           {" "}
           My Location{" "}
         </button>
