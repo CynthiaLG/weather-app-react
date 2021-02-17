@@ -3,6 +3,7 @@ import "./Description.css";
 
 export default function Description() {
   return (
+    
     <div className="Description">
       <ul>
         <li id="humidity">Humidity: 40%</li>

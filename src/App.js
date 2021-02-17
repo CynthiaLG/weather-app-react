@@ -1,13 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import Description from "./Description";
 import ForecastInfo from "./ForecastInfo";
 import MainCityTemp from "./MainCityTemp";
+import axios from "axios";
 
 import Form from "./Form";
 
 import "./styles.css";
 
 export default function App() {
+  const [ready, setReady]=useState(false)
+  const [temperature, setTemperature]=useState(null);
+  function handleResponse(response){
+    console.log(response.data);
+    setTemperature(response.data.main.temp);
+    setReady(true);
+  }
+if (ready){
   return (
     <div className="App">
       <div class="card w-75">
@@ -22,7 +31,7 @@ export default function App() {
           <br />
           <div class="large-temp">
             <div style={{ float: "left" }}>
-              <h1 id="current-temp">26</h1>
+              <h1 id="current-temp">{Math.round(temperature)}</h1>
               <div class="col-0">
                 <a href="#" id="celsius">
                   °C
@@ -44,4 +53,12 @@ export default function App() {
       </div>
     </div>
   );
+} else {
+   const apiKey="f849a290611306768174e22ee045bba6";
+  let city="London"
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(handleResponse);
+
+  return "Loading..."
+}
 }

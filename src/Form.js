@@ -1,11 +1,9 @@
-import React from "react";
+  import React from "react";
+
 import "./Form.css";
 
 export default function Form() {
-  const apiKey="f849a290611306768174e22ee045bba6";
-  let city="London"
-  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-  return (
+return (
     <div className="form">
       <form id="search-form">
         <input
@@ -20,7 +18,6 @@ export default function Form() {
           {" "}
           My Location{" "}
         </button>
-      </form>
-    </div>
+      </form>    </div>
   );
 }
