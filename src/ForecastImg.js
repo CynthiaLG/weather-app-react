@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ForecasteImg() {
   return (
-    <div class="row row-cols-5" id="day-img">
+    <div className="row row-cols-5" id="day-img">
       <div>
         <img id="time1-icon" src="./media/02d@2x.png" alt="cloudy" />
       </div>

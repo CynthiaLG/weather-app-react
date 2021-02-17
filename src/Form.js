@@ -10,7 +10,7 @@ return (
           type="search"
           placeholder="Type your city..."
           className="city-input"
-          autocomplete="off"
+          autoComplete="off"
           autoFocus="on"
         />
         <input type="Submit" className="submit" value="Search" />
