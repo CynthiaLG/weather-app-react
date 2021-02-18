@@ -37,7 +37,7 @@ return (
           className="icon"
           id="icon"
           width="150"
-          src ="media/02d@2x.png"
+          src ={props.data.iconUrl}
           alt="cloudy"
         />
       </span>
