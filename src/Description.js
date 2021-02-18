@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Description.css";
 
 export default function Description() {
@@ -10,7 +11,8 @@ export default function Description() {
     setWeatherData({
       humidity: response.data.main.humidity,
       windSpeed: response.data.wind.speed,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000)
     });
     setReady(true);
   }
@@ -21,7 +23,7 @@ export default function Description() {
         <li id="humidity">Humidity: {weatherData.humidity}%</li>
         <li id="wind-speed">Wind Speed: {weatherData.windSpeed} Km/H </li>
         <li id="descript">{weatherData.description}</li>
-        <li id="local-time">Last Updated: Monday 11:30</li>
+        <li id="local-time"><FormattedDate date={weatherData.date} /></li>
       </ul>
     </div>
   );
