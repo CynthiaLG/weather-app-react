@@ -98,11 +98,6 @@ ul {
   list-style-type: none;
   text-align: left;
 }
-.icon {
-  position: absolute;
-  bottom: 100px;
-  left: 350px;
-}
 .city {
   text-align: center;
   position: relative;
@@ -137,4 +132,9 @@ ul {
 }
 .city-input {
   max-width: 60%;
+}
+.icon canvas {
+  position: absolute;
+  bottom: 100px;
+  left: 380px;
 }
