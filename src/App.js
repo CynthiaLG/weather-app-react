@@ -1,7 +1,4 @@
 import React,{useState} from "react";
-import Description from "./Description";
-import ForecastInfo from "./ForecastInfo";
-import MainCityTemp from "./MainCityTemp";
 import axios from "axios";
 
 import Form from "./Form";
@@ -26,32 +23,10 @@ if (ready){
             <Form />
           </div>
         </div>
-        <div className="container">
-          <ForecastInfo />
+        <Weather data={}/>
           <br />
-          <div className="large-temp">
-            <div style={{ float: "left" }}>
-              <h1 id="current-temp">{Math.round(temperature)}</h1>
-              <div className="col-0">
-                <a href="#" id="celsius">
-                  °C
-                </a>
-                |
-                <a href="#" id="fahrenheit">
-                  °F
-                </a>
-              </div>
-            </div>
-            <Description />
-          </div>
-          <span>
-            <MainCityTemp />
-          </span>
+         </div>
         </div>
-        <br />
-        <br />
-      </div>
-    </div>
   );
 } else {
    const apiKey="f849a290611306768174e22ee045bba6";
