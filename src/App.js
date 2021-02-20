@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Weather from "./Weather";
-
+import "./styles.css";
 
 import "./styles.css";
 
