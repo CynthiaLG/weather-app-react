@@ -12,7 +12,6 @@ const [forecast, setForecast] = useState (null);
  setLoaded(true);
   }
   if (loaded && props.city ===forecast.city.name) {
-    console.log(forecast.data);
       return (
         <div className="WeatherForecast row">
     <ForecastPreview data={forecast.list[0]}/>

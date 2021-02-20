@@ -50,11 +50,7 @@ setCity(event.target.value)
           autoFocus="on"
           onChange={handleCityChange}
         />
-        <input type="Submit" className="submit" value="Search" />
-        <button type="button" className="btn-info-location">
-          {" "}
-          My Location{" "}
-        </button>
+        <input type="Submit" className="submit" value="Search" onSubmit={handleSubmit} />
       </form>   
           <WeatherInfo data={weatherData}/>
         </div>

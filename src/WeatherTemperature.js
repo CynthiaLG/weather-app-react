@@ -21,9 +21,8 @@ function fahrenheit (){
    return (
     <div className ="WeatherTemperature">
         <div className="large-temp">
-            <div style={{ float: "left" }}>
               <h1 id="current-temp">{Math.round(props.celsius)}</h1>
-              <div className="col-0">
+              <span className="col-0">
                 <a href="#" className="celsius" onClick={showToCelsius}>
                   °C
                 </a>
@@ -31,18 +30,16 @@ function fahrenheit (){
                 <a href="#" className="fahrenheit" onClick={showToFahren}>
                   °F
                 </a>
-               </div>
+               </span>
             </div>
         </div>
-    </div>
 ); 
 } else {
 return (
     <div className ="WeatherTemperature">
-        <div className="large-temp">
-            <div style={{ float: "left" }}> 
+        <div className="large-temp"> 
               <h1 id="current-temp">{Math.round(fahrenheit())}</h1>
-              <div className="col-0">
+              <span className="col-0">
                 <a href="/" className="celsius" onClick={showToCelsius}>
                   °C
                 </a>
@@ -50,10 +47,9 @@ return (
                 <a href="/" className="fahrenheit" onClick={showToFahren}>
                   °F
                 </a>
-               </div>
+               </span>
             </div>
         </div>
-    </div>
 );
 }
 }
